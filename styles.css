@@ -1,0 +1,42 @@
+
+body {
+    margin: 0;
+    background-color: rgb(200, 58, 58);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    margin-top: 2em;
+    flex-direction: column;
+    height: 20em;
+    width: 20em;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid red;
+
+}
+
+input {
+    font-size: 1.2em;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+.save {
+    padding: 1em;
+    background-color: rgb(0, 139, 16);
+    cursor: pointer;
+}
+.update {
+    padding: 1em;
+    background-color: rgb(5, 71, 177);
+    cursor: pointer;
+}
+.delete {
+    padding: 1em;
+    background-color: rgb(199, 4, 4);
+    cursor: pointer;
+}
