@@ -1,29 +1,22 @@
 <?php
-   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $json_str = file_get_contents("./horoscope.json");
-        $horoscope = json_decode($json_str);
+    session_start();
 
-    /* Om horoscopen inte finns */
-    if (!isset($horoscope->horoscopeList)) {
-        $horoscope->horoscopeList = [];
-    }
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+      
+       include "./calculateHoroscope.php";
 
-        $newHoroscope = new stdClass();
-        $newHoroscope->birthDate = $_POST['birthdate'];
-
-    foreach ($horoscope->horoscopeList as $user) {
-        if ($user->birthDate === $newHoroscope->birthDate) {
-            echo "Already exists";
-            exit;
-        }
-    }
-
-        $horoscope->horoscopeList[] = $newHoroscope;
-
+   
   
-        file_put_contents("./horoscope.json", json_encode($horoscope));
-        echo $_POST['birthdate'];
-    
+    if (!isset($_SESSION["horoscope"]) ) {
+       $_SESSION["horoscope"] = $horoscope;
+       echo "Successfully saved horoscope";
+    } else {
+        echo "Failed to save horoscope";
+    }
 
-}
+    /* Om inte sidan begärs genom POST, skriv ut error */ 
+    } else {
+        http_response_code(405);
+        die(); 
+    }
 ?>
