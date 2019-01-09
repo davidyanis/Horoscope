@@ -1,10 +1,13 @@
 <?php 
-    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-        $json_str = file_get_contents("./horoscope.json");
-        $horoscope = json_decode($json_str);
+    session_start();
 
-    if (isset($horoscope->horoscopeList)) {
-        $horoscope->horoscopeList = [];
-    }
+    $errormessage = "Inget har sparats, vänligen fyll i födelsedatumet i YYMMDD format";
+
+    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+        if ($SESSION == !null()) {
+            echo ($_SESSION["currentSession"]);
+        } else {
+            echo $errormessage;
+        }
     }
 ?>

@@ -9,10 +9,10 @@
 </head>
 <body>
     <div class="container">
-        <input type="text" placeholder="Födelsenummer">
-        <button class="save" type="submit" onclick="addHoroscope()">Spara mitt horoskop</button>
-        <button class="update" type="submit" onclick="updateHoroscope()">Uppdatera mitt horoskop</button>
-        <button class="delete" type="submit" onclick="deleteHoroscope()">Radera mitt horoskop</button>
+            <input name="birthDate" value="" type="text" placeholder="YYMMDD">
+            <button class="save" type="submit" onclick="addHoroscope()">Spara mitt horoskop +</button>
+            <button class="update" type="submit" onclick="updateHoroscope()">Uppdatera mitt horoskop</button>
+            <button class="delete" type="submit" onclick="deleteHoroscope()">Radera mitt horoskop -</button>
     </div>
 </body>
 </html>
