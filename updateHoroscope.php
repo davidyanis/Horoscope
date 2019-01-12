@@ -2,7 +2,8 @@
     parse_str(file_get_contents("php://input"), $_PUT);
     session_start();
 
-    if ($_SERVER['REQUEST_METHOD'] === 'PUT') {
+    if ($_SERVER["REQUEST_METHOD"] == "PUT") {
+
         if (isset($_SESSION["currentSession"]) == null()) {
             echo "Inget horoskop sparat!";
         } else {
@@ -10,10 +11,10 @@
 
             include "./calculateHoroscope.php";
             
-            $error = $currentsession->stjärntecken();
+            $error = $horoscope->sign();
         }
         if($error) {
-            $_SESSION["currentSession"] = $currentsession->stjärntecken();
+            $_SESSION["currentSession"] = $horoscope->sign();
             echo true;
         } else {
             echo $error;

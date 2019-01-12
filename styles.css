@@ -28,26 +28,31 @@ input {
 
 
 .save {
-    padding: 1em;
-    background-color: #ECF0F1;
+    padding: 0.5em;
+    background-color: rgb(21, 133, 26);
     cursor: pointer;
     transition: 0.5s;
-    color: #3498DB;
-   
+    color: #ECF0F1;
+    font-size: 1.2em;
+    border: none;
 }
 .update {
-    padding: 1em;
-    background-color: #ECF0F1;
+    padding: 0.5em;
+    background-color: #3498DB;
     cursor: pointer;
     transition: 0.5s;
-    color: #3498DB;
+    color: #ECF0F1;
+    font-size: 1.2em;
+    border: none;
 }
 .delete {
-    padding: 1em;
-    background-color: #ECF0F1;
+    padding: 0.5em;
+    background-color: rgb(189, 1, 1);
     cursor: pointer;
     transition: 0.5s;
-    color: #3498DB;
+    color: #ECF0F1;
+    font-size: 1.2em;
+    border: none;
 }
 
 .delete:hover, .update:hover, .save:hover {
