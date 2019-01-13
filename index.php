@@ -11,7 +11,8 @@
 </head>
 <body>
     <div class="container">
-            <input name="birthDate" value="" type="text" placeholder="YYMMDD">
+            <div class="myHoroscope"></div>
+            <input id="inputValue" value="" type="number" placeholder="YYMMDD" maxlength="6">
             <button class="save" type="submit" onclick="addHoroscope()">Spara mitt horoskop +</button>
             <button class="update" type="submit" onclick="updateHoroscope()">Uppdatera mitt horoskop</button>
             <button class="delete" type="submit" onclick="deleteHoroscope()">Radera mitt horoskop -</button>

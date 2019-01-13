@@ -1,5 +1,5 @@
 <?php
-   class calculateHoroscope {
+   class Person {
        private $horoscope;
 
             function _construct($sign) {
@@ -51,6 +51,6 @@
    }
 
             $sign = substr($_POST["födelsedatum"], -4, 4);
-            $horoscope = new User($sign);
+            $horoscope = new Person($sign);
 ?>
      
