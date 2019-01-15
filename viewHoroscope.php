@@ -1,11 +1,11 @@
 <?php 
     session_start();
 
-    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         if ($_SESSION == !null) {
-            echo ($_SESSION["currentSession"]);
+            echo ($_SESSION["horoscope"]);
         } else {
-            echo "Inget har sparats, vänligen fyll i födelsedatumet i YYMMDD format";
+            echo "Du har redan sparat ett horoskop";
         }
     }
 ?>
