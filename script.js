@@ -1,16 +1,19 @@
 
-    /* Visa om det finns ett horoskop sparat */
-    function viewHoroscope() {
-    $.ajax({
-        url: "./viewHoroscope.php",
-        method: "GET",
-        success: function(results) {
-            $(".myHoroscope").html(results);
-        }
-    })
+    /* On load */
+    showHoroscope();
+
+    /* Om det finns ett horoskop, visa den */
+    function showHoroscope() {
+        $.ajax({
+            url: "viewHoroscope.php",
+            method: "GET",
+            success: function(results) {
+                    $(".myHoroscope").html(results);
+            }
+        })
     }
 
-    /* Lägger till horoskop om inget finns */
+    /* Sparar horoskop om den är tom */
     function addHoroscope() {
         $.ajax({
             url: "./addHoroscope.php",
@@ -19,26 +22,28 @@
                 "birthDate": $("#inputValue").val()
             },
             success: function(results) {
+                /* Om resultatet har kommit till echo "true" i addHoroscope.php */
                 if (results == "true") {
-                    viewHoroscope();
+                    showHoroscope();
                 } else {
                     $(".myHoroscope").html(results);
                 }
-            }
-        });
-    }
 
-    /* Uppdaterar om man skriver in ett nytt födelsedatum */
+            }
+        })
+    };
+
+    /* Visar sparat horoskop */
     function updateHoroscope() {
         $.ajax({
-            url: "./updateHoroscope.php",
+            url: "updateHoroscope.php",
             method: "PUT",
             data: {
                 "birthDate": $("#inputValue").val()
             },
             success: function(results) {
-                if (results == true) {
-                    viewHoroscope()
+                if (results == "true") {
+                    showHoroscope();
                 } else {
                     $(".myHoroscope").html(results);
                 }
@@ -46,24 +51,27 @@
         })
     }
 
-    /* Raderar horoskop */
+
+    /* Tar bort horoskop om den finns */
     function deleteHoroscope() {
         $.ajax({
-            url: "./deleteHoroscope.php",
+            url: "deleteHoroscope.php",
             method: "DELETE",
             data: {
                 "birthDate": $("#inputValue").val()
             },
-            success: function(results) {
-                if (results == true) {
-                    viewHoroscope()
-                } else {
+            success: function(results) {           
                     $(".myHoroscope").html(results);
-                }
             }
         })
-        
     }
+
+    $("h3").fadeOut("slow");
+    console.log("lewf")
+
+
+
+
 
 
 

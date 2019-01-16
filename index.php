@@ -11,11 +11,13 @@
 </head>
 <body>
     <div class="container">
-            <div class="myHoroscope"></div>
+            <div class="myHoroscope">
+
+            </div>
             <input id="inputValue" value="" type="text" placeholder="YYMMDD" maxlength="6">
-            <button class="save" type="submit" onclick="addHoroscope()">Spara mitt horoskop +</button>
-            <button class="update" type="submit" onclick="updateHoroscope()">Uppdatera mitt horoskop</button>
-            <button class="delete" type="submit" onclick="deleteHoroscope()">Radera mitt horoskop -</button>
+            <button class="save" onclick="addHoroscope()">Spara mitt horoskop +</button>
+            <button class="update" onclick="updateHoroscope()">Uppdatera mitt horoskop</button>
+            <button class="delete" onclick="deleteHoroscope()">Radera mitt horoskop -</button>
     </div>
 </body>
 </html>

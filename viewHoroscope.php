@@ -1,11 +1,13 @@
-<?php 
+<?php
     session_start();
 
-    if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-        if ($_SESSION == !null) {
+    $error = "<h3>Räkna ut ditt horoskop</h3>";
+
+    if($_SERVER["REQUEST_METHOD"] == "GET"){
+        if($_SESSION){
             echo ($_SESSION["horoscope"]);
         } else {
-            echo "Du har redan sparat ett horoskop";
+            echo $error;
         }
-    }
+    };
 ?>

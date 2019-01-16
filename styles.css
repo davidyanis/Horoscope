@@ -1,6 +1,7 @@
 
 body {
     margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #2C3E50;
     display: flex;
     justify-content: center;
@@ -33,8 +34,10 @@ input {
     cursor: pointer;
     transition: 0.5s;
     color: #ECF0F1;
-    font-size: 1.2em;
+    font-size: 1.1em;
     border: none;
+    -webkit-transition-delay: 1s; /* Safari */
+    transition-delay: 1s;
 }
 .update {
     padding: 0.5em;
@@ -42,7 +45,7 @@ input {
     cursor: pointer;
     transition: 0.5s;
     color: #ECF0F1;
-    font-size: 1.2em;
+    font-size: 1.1em;
     border: none;
 }
 .delete {
@@ -51,11 +54,11 @@ input {
     cursor: pointer;
     transition: 0.5s;
     color: #ECF0F1;
-    font-size: 1.2em;
+    font-size: 1.1em;
     border: none;
 }
 
 .delete:hover, .update:hover, .save:hover {
     filter: brightness(85%);
-    
 }
+
