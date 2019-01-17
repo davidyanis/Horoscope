@@ -1,7 +1,6 @@
 # REST API 
 
-Demo länk -
-https://davidyanis.github.io/rest_api/
+Demo länk - funkar tyvärr inte med PHP
 
 # Hur det funkar
 
