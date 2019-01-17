@@ -9,7 +9,7 @@
             $this->sign = $sign;
 
             if(strlen($sign) < 4) {    
-                echo false;
+                echo "<p>OBS! Du har fyllt in ditt födelsedatum inkorrekt.</p>";
             } 
 
             else if($sign >= '0120' && $sign <= '0218'){            
@@ -52,7 +52,7 @@
                 $this->horoscope = "<p>Ditt horoskop är <b>Stenbocken</b>";             
             }
             else {
-                echo false;
+                echo "<p>OBS! Du har fyllt in ditt födelsedatum inkorrekt.</p>";
             }
         }
         
