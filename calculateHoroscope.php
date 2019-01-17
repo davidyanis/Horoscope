@@ -11,6 +11,7 @@
             if(strlen($sign) < 4) {    
                 echo false;
             } 
+
             else if($sign >= '0120' && $sign <= '0218'){            
                 $this->horoscope = "<p>Ditt horoskop är <b>Vattumannen</b></p>";          
             } 
@@ -44,7 +45,10 @@
             else if($sign >= '1122' && $sign <= '1221') {              
                 $this->horoscope = "<p>Ditt horoskop är <b>Skytten</b>";
             } 
-            else if($sign >= '1222' && $sign <= '0119') { 
+            else if($sign >= '1222' && $sign <= '1231') { 
+                $this->horoscope = "<p>Ditt horoskop är <b>Stenbocken</b>";             
+            }
+            else if($sign >= '0101' && $sign <= '0119') { 
                 $this->horoscope = "<p>Ditt horoskop är <b>Stenbocken</b>";             
             }
             else {
@@ -57,6 +61,7 @@
         }
         
     }
-    $sign = substr($_POST["birthDate"], -4, 4);
+    
+    $sign = substr($_POST["birthDate"], 2, 4);
     $horoscope = new Person($sign);
 ?>
