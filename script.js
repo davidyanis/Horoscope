@@ -8,7 +8,7 @@
             url: "viewHoroscope.php",
             method: "GET",
             success: function(results) {
-                    $(".myHoroscope").html(results);
+                $(".myHoroscope").html(results);
             }
         })
     }

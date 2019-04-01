@@ -7,13 +7,12 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #E74C3C;
 }
 .container {
     display: flex;
     justify-content: center;
     padding: 2em;
-    margin-top: 2em;
+    margin-top: 9em;
     flex-direction: column;
     height: 20em;
     width: 20em;
@@ -63,9 +62,5 @@ input {
 
 .delete:hover, .update:hover, .save:hover {
     filter: brightness(85%);
-}
-
-h1 {
-    color: #E74C3C;
 }
 

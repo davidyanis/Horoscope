@@ -10,7 +10,6 @@
     <script src="script.js"></script>
 </head>
 <body>
-<h1>Horoskop</h1>
     <div class="container">
             <div class="myHoroscope">
 
